@@ -1,0 +1,17 @@
+.page-title-container {
+  .page-title-content {
+    font-size: 16px;
+    position: relative;
+    font-weight: bolder;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      left: -8px;
+      width: 4px;
+      background: #1DA57A;
+    }
+  }
+}

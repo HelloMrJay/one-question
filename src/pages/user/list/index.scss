@@ -1,0 +1,19 @@
+.user-list-container {
+  .user-list {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .filter-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .w188 {
+          width: 188px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

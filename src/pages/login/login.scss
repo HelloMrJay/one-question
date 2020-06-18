@@ -1,0 +1,32 @@
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/TVYTbAXWheQpRcWDaDMu.svg);
+
+  .login-wrapper {
+    width: 368px;
+    margin: 0 auto;
+    padding-top: 200px;
+
+    .login-form {
+      &__header {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 14px;
+        }
+      }
+
+      &__sub {
+        padding-top: 13px;
+
+        span {
+          color: #999999;
+        }
+      }
+      &__content {
+        margin-top: 30px;
+      }
+    }
+  }
+}
