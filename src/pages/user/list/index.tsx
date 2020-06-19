@@ -2,12 +2,45 @@ import React, { useState } from 'react';
 import { Button, Input } from 'antd';
 import PageTitle from '../../../components/page-title';
 import withModal, { WithModalProps } from '../../../components/modal';
+import Form from '../../../components/form'
 import './index.scss';
+
+const fields = [
+  {
+    label: '用户名',
+    name: 'username',
+    type: 'input',
+    key: 'username',
+    placeholder: '请输入用户名',
+    labelCol: { span: 6 },
+    rules: [{ required: true, message: '请输入用户名' }]
+  },
+  {
+    label: '密码',
+    name: 'password',
+    type: 'password',
+    key: 'password',
+    placeholder: '请输入密码',
+    labelCol: { span: 6 },
+    rules: [{ required: true, message: '请输入密码' }]
+  },
+  {
+    label: '邮箱',
+    name: 'email',
+    type: 'input',
+    key: 'email',
+    placeholder: '请输入邮箱',
+    labelCol: { span: 6 },
+    rules: [{ required: true, message: '请输入邮箱' }]
+  }
+]
 
 @withModal
 class Modal extends React.Component<WithModalProps> {
   render() {
-    return <span>弹出框内容</span>;
+    return (
+      <Form fields={fields} />
+    )
   }
 }
 
