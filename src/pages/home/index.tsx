@@ -8,6 +8,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     !localStorage.getItem('USER_INFO') && history.push('/login')
+    localStorage.getItem('USER_INFO') && history.push('/user/list')
   }, [])
   return (
     <div className="home-container">
