@@ -6,9 +6,7 @@ import {
   Button,
   Col
 } from 'antd';
-import { LoginForm } from '../../model/user';
-// @ts-ignore
-import { login } from '@/api/user';
+import { login } from '@api/user';
 import { useHistory } from 'react-router-dom'
 
 import {
@@ -28,7 +26,7 @@ const layout = {
 const Login: React.FC = () => {
   const history = useHistory()
 
-  const onFinishHandler = async (values: LoginForm) => {
+  const onFinishHandler = async (values: User.LF) => {
     let res = await login(values)
     if (res) {
       localStorage.setItem('USER_INFO', JSON.stringify(res))
@@ -49,7 +47,7 @@ const Login: React.FC = () => {
           <Form
             {...layout}
             name="basic"
-            onFinish={(values) => onFinishHandler(values as LoginForm)}
+            onFinish={(values) => onFinishHandler(values as User.LF)}
           >
             <Form.Item
               label="用户名"

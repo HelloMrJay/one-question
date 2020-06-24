@@ -18,9 +18,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "experimentalDecorators":true
+    "experimentalDecorators": true
   },
   "include": [
     "src"
-  ]
+  ],
+  "extends": "./base-tsconfig.json"
 }
